@@ -18,12 +18,21 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    return (
+    <html lang="en">
+      <body className="bg-amber-50 antialiased">
+        <header className="border-b-2 border-amber-700 bg-stone-900 text-amber-50">
+          <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 p-4">
+            <a href="/" className="text-lg font-bold">HappyPie 🥧</a>
+            <a href="/menu" className="text-sm hover:text-amber-300">Menu</a>
+            <a href="/cart" className="text-sm hover:text-amber-300">Cart</a>
+            <a href="/order" className="text-sm hover:text-amber-300">Order</a>
+            <a href="/about" className="text-sm hover:text-amber-300">About</a>
+            <a href="/chat" className="text-sm hover:text-amber-300">Chat</a>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
