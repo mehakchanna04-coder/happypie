@@ -14,10 +14,13 @@ export default function Home() {
       <h2 className="mt-12 text-2xl font-semibold">Today&apos;s favourites</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         {featured.map((item) => (
-          <div key={item.id} className="rounded-lg border bg-white p-4">
-            <h3 className="font-semibold">{item.name}</h3>
-            <p className="text-sm text-gray-600">{item.description}</p>
-            <p className="mt-2 font-mono text-amber-800">Rs {item.price}</p>
+          <div key={item.id} className="overflow-hidden rounded-lg border bg-white">
+            <img src={item.image} alt={item.name} className="h-36 w-full object-cover" />
+            <div className="p-4">
+              <h3 className="font-semibold">{item.name}</h3>
+              <p className="text-sm text-gray-600">{item.description}</p>
+              <p className="mt-2 font-mono text-amber-800">Rs {item.price}</p>
+            </div>
           </div>
         ))}
       </div>
