@@ -32,7 +32,7 @@ export function Chat() {
         {messages.map((m) => (
           <div key={m.id}
             className={`max-w-[85%] whitespace-pre-wrap rounded-lg px-4 py-2 text-sm ${
-              m.role === "user" ? "ml-auto bg-stone-900 text-amber-50" : "bg-white text-stone-900 shadow-sm"
+              m.role === "user" ? "ml-auto bg-[#C2405A] text-amber-50" : "bg-white text-stone-900 shadow-sm"
             }`}>
             {m.parts.map((part, i) => {
               if (part.type === "text") return <span key={i}>{part.text}</span>;
@@ -49,7 +49,7 @@ export function Chat() {
       </div>
 
       {error && (
-        <p role="alert" className="mb-2 rounded bg-red-50 px-3 py-2 text-sm text-red-700">
+        <p role="alert" className="mb-2 rounded-full bg-red-50 px-3 py-2 text-sm text-red-700">
           Something went wrong talking to the assistant.
           <button onClick={() => window.location.reload()} className="ml-2 underline">Reload</button>
         </p>
@@ -69,9 +69,9 @@ export function Chat() {
           placeholder="Ask HappyPie…" aria-label="Chat message"
           className="min-w-0 flex-1 rounded border bg-white px-3 py-2 text-sm" />
         {busy ? (
-          <button type="button" onClick={stop} className="rounded bg-red-700 px-4 py-2 text-sm text-white">Stop</button>
+          <button type="button" onClick={stop} className="rounded-full bg-red-700 px-4 py-2 text-sm text-white">Stop</button>
         ) : (
-          <button type="submit" className="rounded bg-amber-700 px-4 py-2 text-sm text-white">Send</button>
+          <button type="submit" className="rounded-full bg-[#C2405A] px-4 py-2 text-sm text-white">Send</button>
         )}
       </form>
     </div>

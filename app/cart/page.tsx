@@ -22,7 +22,7 @@ export default function CartPage() {
         <h1 className="text-3xl font-bold">Your cart</h1>
         <div className="mt-6 rounded-lg border border-dashed bg-white p-8 text-center">
           <p className="text-gray-600">Nothing here yet — the croissants are waiting.</p>
-          <a href="/menu" className="mt-4 inline-block rounded bg-amber-700 px-4 py-2 text-white">
+          <a href="/menu" className="mt-4 inline-block rounded-full bg-[#C2405A] px-4 py-2 text-white">
             Browse the menu
           </a>
         </div>
@@ -35,7 +35,7 @@ export default function CartPage() {
       <h1 className="text-3xl font-bold">Your cart</h1>
       <div className="mt-6 space-y-3">
         {rows.map((r) => (
-          <div key={r.id} className="flex items-center justify-between rounded-lg border bg-white p-4">
+          <div key={r.id} className="flex items-center justify-between rounded-2xl border border-[#EADFD2] bg-white shadow-sm p-4">
   <div className="flex items-center gap-3">
     <img src={r.item!.image} alt={r.item!.name} className="h-14 w-14 rounded object-cover" />
     <div>
@@ -54,7 +54,7 @@ export default function CartPage() {
       </div>
       <div className="mt-6 flex items-center justify-between border-t pt-4">
         <p className="text-lg font-semibold">Total: <span className="font-mono">Rs {total}</span></p>
-        <a href="/order" className="rounded bg-amber-700 px-5 py-2.5 text-white">Place order</a>
+        <a href="/order" className="rounded-full bg-[#C2405A] px-5 py-2.5 text-white">Place order</a>
       </div>
     </main>
   );

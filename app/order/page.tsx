@@ -38,7 +38,7 @@ export default function OrderPage() {
             Pickup in ~20 minutes.
           </p>
           <p className="mt-2 text-sm text-green-800">(Demo project — no payment, no real order.)</p>
-          <a href="/menu" className="mt-4 inline-block rounded bg-amber-700 px-4 py-2 text-white">Order more</a>
+          <a href="/menu" className="mt-4 inline-block rounded-full bg-[#C2405A] px-4 py-2 text-white">Order more</a>
         </div>
       </main>
     );
@@ -63,9 +63,9 @@ export default function OrderPage() {
             className="mt-1 w-full rounded border bg-white px-3 py-2" />
         </div>
         {error && (
-          <p id="order-error" role="alert" className="rounded bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>
+          <p id="order-error" role="alert" className="rounded-full bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>
         )}
-        <button type="submit" className="rounded bg-amber-700 px-5 py-2.5 font-medium text-white">
+        <button type="submit" className="rounded-full bg-[#C2405A] px-5 py-2.5 font-medium text-white">
           Place order
         </button>
       </form>

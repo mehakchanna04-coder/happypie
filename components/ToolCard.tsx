@@ -26,7 +26,7 @@ export function ToolCard({ part }: { part: any }) {
     return <div className={`${base} border-amber-700 bg-amber-50`}>
       <div className="flex items-center justify-between">
         <p className="font-bold text-stone-900">{item.name}</p>
-        <span className="font-mono text-amber-800">Rs {item.price}</span>
+        <span className="font-mono text-[#B07A2A]">Rs {item.price}</span>
       </div>
       <p className="mt-1 text-stone-600">{item.description}</p>
       <p className="mt-1 text-xs">
