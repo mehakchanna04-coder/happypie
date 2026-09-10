@@ -36,10 +36,13 @@ export default function CartPage() {
       <div className="mt-6 space-y-3">
         {rows.map((r) => (
           <div key={r.id} className="flex items-center justify-between rounded-lg border bg-white p-4">
-            <div>
-              <p className="font-semibold">{r.item!.name}</p>
-              <p className="text-sm text-gray-600">Rs {r.item!.price} each</p>
-            </div>
+  <div className="flex items-center gap-3">
+    <img src={r.item!.image} alt={r.item!.name} className="h-14 w-14 rounded object-cover" />
+    <div>
+      <p className="font-semibold">{r.item!.name}</p>
+      <p className="text-sm text-gray-600">Rs {r.item!.price} each</p>
+    </div>
+  </div>
             <div className="flex items-center gap-3">
               <button onClick={() => setCart((c) => removeFromCart(c, r.id))} className="h-8 w-8 rounded border" aria-label={`Remove one ${r.item!.name}`}>−</button>
               <span className="w-6 text-center">{r.qty}</span>

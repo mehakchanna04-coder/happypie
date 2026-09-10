@@ -15,7 +15,7 @@ export default function Home() {
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         {featured.map((item) => (
           <div key={item.id} className="overflow-hidden rounded-lg border bg-white">
-            <img src={item.image} alt={item.name} className="h-36 w-full object-cover" />
+            <img src={item.image} alt={item.name} className="aspect-square w-full bg-amber-100 object-contain" />
             <div className="p-4">
               <h3 className="font-semibold">{item.name}</h3>
               <p className="text-sm text-gray-600">{item.description}</p>
